@@ -43,7 +43,10 @@ font-family: Helvetica, Arial, sans-serif;
 font-size: 12px;
 line-height: 18px;
 }
-#cc_app_image img {}
+#cc_app_image img {
+	max-height: 100px;
+	max-width: 200px;
+}
 #cc_widget {width: 600px;
 	-webkit-box-shadow: rgb(222, 216, 216) 0px 1px 8px 1px;
 	background-attachment: scroll;
