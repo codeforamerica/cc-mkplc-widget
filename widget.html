@@ -16,7 +16,8 @@
         success: function(data) {
         	$('#cc_app_logo').append($('<img>', { 
 		    src : 'http://marketplace.civiccommons.org/sites/default/files/styles/app_detail_logo/public/content/applications/logos/' + data.field_application_logo.und[0].filename, 
-		    height : 100,
+		    max-height: 100,
+			max-height: 200,
 		 	align: 'right',
 		    alt : "Logo",
 		    title : "Logo"
