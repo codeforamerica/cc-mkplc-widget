@@ -14,7 +14,7 @@
         url: "http://marketplace.civiccommons.org/api/v1/node/" + appId + ".jsonp",
         dataType:"jsonp",
         success: function(data) {
-          $('#cc_app_logo').append($('<img>', { 
+        	$('#cc_app_logo').append($('<img>', { 
 		    src : 'http://marketplace.civiccommons.org/sites/default/files/styles/app_detail_logo/public/content/applications/logos/' + data.field_application_logo.und[0].filename, 
 		    width : 100, 
 		    height : 100,
