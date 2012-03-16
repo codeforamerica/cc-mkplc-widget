@@ -1,7 +1,7 @@
 #cc_app_title {background-attachment: scroll;
 background-clip: border-box;
 background-color: #669FE9;
-background-image: url(http://dev.cc.warecorp.com/sites/all/themes/civiccommons/images/bluehead.png);
+background-image: url(http://civiccommons.org/sites/all/themes/civiccommons/images/bluehead.png);
 background-origin: padding-box;
 border-bottom-color: #5684BF;
 border-bottom-style: solid;
@@ -73,7 +73,7 @@ line-height: 18px;
 	width: 600px;}
 
 	#cc_app_deployments {
-	background: url(http://dev.cc.warecorp.com/sites/all/themes/civiccommons/images/icon_place_mini.gif) no-repeat;
+	background: url(http://civiccommons.org/sites/all/themes/civiccommons/images/icon_place_mini.gif) no-repeat;
 	border: none;
 	color: #666;
 	font-family: Helvetica, Arial, sans-serif;
