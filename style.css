@@ -1,51 +1,52 @@
-#cc_app_title {background-attachment: scroll;
-background-clip: border-box;
-background-color: #669FE9;
-background-image: url(http://civiccommons.org/sites/all/themes/civiccommons/images/bluehead.png);
-background-origin: padding-box;
-border-bottom-color: #5684BF;
-border-bottom-style: solid;
-border-bottom-width: 1px;
-border-left-color: #99C5FF;
-border-left-style: solid;
-border-left-width: 1px;
-border-right-color: #5684BF;
-border-right-style: solid;
-border-right-width: 1px;
-border-top-color: #99C5FF;
-border-top-style: solid;
-border-top-width: 1px;
-color: white;
-display: block;
-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-font-size: 16px;
-font-weight: normal;
-height: 32px;
-letter-spacing: normal;
-line-height: 32px;
-margin-bottom: 5px;
-margin-left: 0px;
-margin-right: 0px;
-margin-top: 0px;
-outline-color: white;
-outline-style: none;
-outline-width: 0px;
-padding-bottom: 0px;
-padding-left: 12px;
-padding-right: 12px;
-padding-top: 0px;
-text-transform: uppercase;
-vertical-align: baseline;
-width: 574px;}
-#cc_app_description {
-color: #444;
-font-family: Helvetica, Arial, sans-serif;
-font-size: 12px;
-line-height: 18px;
+#cc_app_title {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #669FE9;
+    background-image: url(http://civiccommons.org/sites/all/themes/civiccommons/images/bluehead.png);
+    background-origin: padding-box;
+    border-bottom-color: #5684BF;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #99C5FF;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #5684BF;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #99C5FF;
+    border-top-style: solid;
+    border-top-width: 1px;
+    color: white;
+    display: block;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    height: 32px;
+    letter-spacing: normal;
+    line-height: 32px;
+    margin: 0px 0px 5px 0px;
+    outline-color: white;
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 0px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    width: 574px;
 }
+
+#cc_app_description {
+    color: #444;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+}
+
 #cc_app_image img {
-	max-height: 100px;
-	max-width: 200px;
+    max-height: 100px;
+    max-width: 200px;
 }
 #cc_widget {width: 600px;
 	-webkit-box-shadow: rgb(222, 216, 216) 0px 1px 8px 1px;
@@ -72,7 +73,7 @@ line-height: 18px;
 	vertical-align: baseline;
 	width: 600px;}
 
-	#cc_app_deployments {
+#cc_app_deployments {
 	background: url(http://civiccommons.org/sites/all/themes/civiccommons/images/icon_place_mini.gif) no-repeat;
 	border: none;
 	color: #666;
@@ -80,10 +81,7 @@ line-height: 18px;
 	font-size: 16px;
 	font-weight: bold;
 	line-height: 18px;
-	margin-bottom: 5px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 0px;
+	margin-bottom: 0px 0px 5px 0px;
 	padding-bottom: 0px;
 	padding-left: 24px;
 	padding-right: 0px;
@@ -91,5 +89,16 @@ line-height: 18px;
 	vertical-align: baseline;
 	width: 400px;
 	height: 30px;}
-	.views-label {font-size: 16px; font-weight: bold;}
-	#cc_main_container {padding: 0px 10px 10px 10px;}
+
+.views-label {
+    font-size: 16px; 
+    font-weight: bold;
+    }
+
+#cc_main_container {
+    padding: 0px 10px 10px 10px;
+    }
+
+#cc_app_description p {
+    margin-top: 0px;
+}
