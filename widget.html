@@ -4,6 +4,7 @@
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<link href="style.css" type="text/css" rel="stylesheet" />
+	<base target="_blank" />
     <script>
  	
 	var the_hash = window.location.hash;
@@ -14,12 +15,7 @@
         url: "http://civiccommons.org/api/v1/node/" + appId + ".jsonp",
         dataType:"jsonp",
         success: function(data) {
-        	$('#cc_app_logo').append($('<img>', { 
-		    src : 'http://civiccommons.org/sites/default/files/styles/app_detail_logo/public/content/applications/logos/' + data.field_application_logo.und[0].filename, 
-		 	align: 'right',
-		    alt : "Logo",
-		    title : "Logo"
-		}));
+		    $('#cc_app_logo').append('<a href="' + data.path + '"><img src="http://civiccommons.org/sites/default/files/styles/app_detail_logo/public/content/applications/logos/' + data.field_application_logo.und[0].filename + '" align="right" target="_top" alt="Logo" title="Logo"></a>');
 			$('#cc_app_title').append(data.title);
 			$('#cc_app_title_clean').append(data.title);
 			$('#cc_app_description').append(data.field_application_description.und[0].value);
