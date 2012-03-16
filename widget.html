@@ -1,0 +1,54 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<link href="style.css" type="text/css" rel="stylesheet" />
+    <script>
+ 	
+	var the_hash = window.location.hash;
+	
+	var appId = the_hash.replace( /#/, "");
+
+      $.ajax({
+        url: "http://civiccommons.org/api/v1/node/" + appId + ".jsonp",
+        dataType:"jsonp",
+        success: function(data) {
+        	$('#cc_app_logo').append($('<img>', { 
+		    src : 'http://civiccommons.org/sites/default/files/styles/app_detail_logo/public/content/applications/logos/' + data.field_application_logo.und[0].filename, 
+		 	align: 'right',
+		    alt : "Logo",
+		    title : "Logo"
+		}));
+			$('#cc_app_title').append(data.title);
+			$('#cc_app_title_clean').append(data.title);
+			$('#cc_app_description').append(data.field_application_description.und[0].value);
+			$('#cc-places-count').append(data.field_application_interactions.und.length);
+			$('a#cc_app_link').attr("href", data.path);
+			
+          console.log(data);
+        }
+      });
+    </script>
+
+<div id="cc_widget">
+
+	<div id="cc_app_title"></div>
+
+	<div id="cc_main_container">
+
+		<div id="cc_app_logo"></div>
+    
+		<div class='view-header' id='cc_app_description' style='padding: 10px 10px 5px 5px;'></div>
+
+		<img src='http://civiccommons.org/sites/default/files/civcoms-logo.png' width='100px' align='right' style='padding: 15px; float: right; display: inline;'>    
+	
+		<div id="cc_app_deployments"> Used in <span id='cc-places-count'></span> places</div>
+	
+		<div class='view-header' style='padding: 0px 10px 5px 5px; font-style: italic; font-size: .8em;'>Learn More <span id="cc_app_title_clean"></span> in the <a id="cc_app_link" target="top">Civic Commons Marketplace...</a></div> 
+	</div>
+
+</div>
+	
+  </body>
+</html>
