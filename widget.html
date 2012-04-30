@@ -7,26 +7,35 @@
     <script>
  	
 	var the_hash = window.location.hash;
-	
 	var appId = the_hash.replace( /#/, "");
+     var logo;
+     var description;
 
       $.ajax({
         url: "http://civiccommons.org/api/v1/node/" + appId + ".jsonp",
         dataType:"jsonp",
         success: function(data) {
+			if (data.field_application_logo.und) {
+				logo = 'content/applications/logos/' + data.field_application_logo.und[0].filename;
+			} else {
+				logo = 'default_images/default-app-icon_0.png';
+			}
+			if (data.field_application_description.und.length > 0) {
+				description = data.field_application_description.und[0].value;
+			} else {
+				description = 'No description provided';
+			}        
         	$('#cc_app_logo').append($('<img>', { 
-		    src : 'http://civiccommons.org/sites/default/files/styles/app_detail_logo/public/content/applications/logos/' + data.field_application_logo.und[0].filename, 
-		 	align: 'right',
+		    src : 'http://civiccommons.org/sites/default/files/styles/app_detail_logo/public/' + logo, 
+		    align: 'right',
 		    alt : "Logo",
 		    title : "Logo"
 		}));
 			$('#cc_app_title').append(data.title);
 			$('#cc_app_title_clean').append(data.title);
-			$('#cc_app_description').append(data.field_application_description.und[0].value);
+			$('#cc_app_description').append(description);
 			$('#cc-places-count').append(data.field_application_interactions.und.length);
 			$('a#cc_app_link').attr("href", data.path);
-			
-          console.log(data);
         }
       });
     </script>
